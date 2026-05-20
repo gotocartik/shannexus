@@ -14,12 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #1A365D;
-      --primary-light: #2B4C7E;
-      --primary-dark: #0F1D2F;
-      --accent: #C9A84C;
-      --accent-light: #E8D5A3;
-      --accent-dark: #A8892E;
+      --primary: #092a57;
+      --primary-light: #1a3d6e;
+      --primary-dark: #051a33;
+      --accent: #d65c1d;
+      --accent-light: #f07a3a;
+      --accent-dark: #b44712;
       --heading: #1A202C;
       --body: #4A5568;
       --light-bg: #F7FAFC;
@@ -37,7 +37,7 @@
     img { max-width: 100%; height: auto; }
     .container { max-width: 1200px; }
     .section-padding { padding: 90px 0; }
-    .section-label { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .section-label { display: inline-block; font-size: 0.9rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
     .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; color: var(--primary); }
     .section-subtitle { font-size: 1.1rem; color: var(--body); max-width: 640px; margin: 0 auto 48px; }
     .text-accent { color: var(--accent) !important; }
@@ -51,7 +51,7 @@
     .btn-primary { background-color: var(--primary); border-color: var(--primary); color: #fff; }
     .btn-primary:hover { background-color: var(--primary-light); border-color: var(--primary-light); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(26,54,93,0.25); }
     .btn-accent { background-color: var(--accent); border-color: var(--accent); color: var(--primary-dark); }
-    .btn-accent:hover { background-color: var(--accent-dark); border-color: var(--accent-dark); color: #fff; transform: translateY(-1px); box-shadow: 0 8px 20px rgba(201,168,76,0.35); }
+    .btn-accent:hover { background-color: var(--accent-dark); border-color: var(--accent-dark); color: #fff; transform: translateY(-1px); box-shadow: 0 8px 20px rgba(214,92,29,0.35); }
     .btn-outline-primary { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
     .btn-outline-primary:hover { background-color: var(--primary); color: #fff; transform: translateY(-1px); }
     .btn-outline-accent { border: 2px solid var(--accent); color: var(--accent); background: transparent; }
@@ -85,7 +85,7 @@
     .hero { position: relative; padding: 100px 0 80px; overflow: hidden; background: linear-gradient(135deg, #F7FAFC 0%, #EDF2F7 100%); }
     .hero-bg-circle { position: absolute; top: -40%; right: -15%; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%); pointer-events: none; }
     .hero-bg-circle-2 { position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(26,54,93,0.06) 0%, transparent 70%); pointer-events: none; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,0.12); color: var(--accent-dark); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(201,168,76,0.2); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(214,92,29,0.12); color: var(--accent-dark); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(214,92,29,0.2); }
     .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; color: var(--primary); }
     .hero h1 span { color: var(--primary); }
     .hero p { font-size: 1.15rem; color: var(--body); max-width: 560px; margin-bottom: 32px; }
@@ -123,7 +123,7 @@
     /* Why Choose Us */
     .why-card { text-align: center; padding: 36px 24px; border-radius: var(--radius); background: #fff; border: 1px solid var(--border); height: 100%; transition: all 0.35s ease; }
     .why-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); }
-    .why-card .icon-wrapper { background: rgba(201,168,76,0.12); color: var(--accent-dark); margin: 0 auto 20px; }
+    .why-card .icon-wrapper { background: rgba(214,92,29,0.12); color: var(--accent-dark); margin: 0 auto 20px; }
     .why-card:hover .icon-wrapper { background: var(--accent); color: var(--primary-dark); }
     .why-card:hover .icon-wrapper i { color: var(--primary-dark) !important; }
     .why-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
@@ -212,7 +212,7 @@
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.4); } 50% { box-shadow: 0 0 0 16px rgba(201,168,76,0); } }
+    @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(214,92,29,0.4); } 50% { box-shadow: 0 0 0 16px rgba(201,168,76,0); } }
     @keyframes scaleIn { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
     .animate-float { animation: float 4s ease-in-out infinite; }
     .animate-pulse-gold { animation: pulse-gold 2s ease-in-out infinite; }
@@ -299,10 +299,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
         </ul>
         <a href="https://wa.me/971543411357?text=Hi%20Shanexus%20Global%2C%20I%27d%20like%20to%20connect" target="_blank" class="btn btn-whatsapp d-flex align-items-center gap-2">
           <i class="ti ti-brand-whatsapp" style="font-size: 1.2rem;"></i> Quick Connect
@@ -335,7 +335,7 @@
           <div class="hero-image-wrapper">
             <img src="assets/images/dubai/dubai-1.jpg" alt="Shanexus Global" class="img-fluid">
             <div class="hero-float-card top d-none d-lg-flex">
-              <div style="width:44px;height:44px;border-radius:12px;background:rgba(201,168,76,0.12);display:flex;align-items:center;justify-content:center;color:var(--accent-dark);">
+              <div style="width:44px;height:44px;border-radius:12px;background:rgba(214,92,29,0.12);display:flex;align-items:center;justify-content:center;color:var(--accent-dark);">
                 <i class="ti ti-users" style="font-size:1.3rem;"></i>
               </div>
               <div>
@@ -425,7 +425,7 @@
       <div class="row g-4 justify-content-center">
         <div class="col-lg-6 col-md-6 reveal reveal-delay-1">
           <div class="vision-mission-card">
-            <div style="width:40px;height:40px;border-radius:10px;background:rgba(201,168,76,0.12);display:flex;align-items:center;justify-content:center;color:var(--accent-dark);margin-bottom:12px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(214,92,29,0.12);display:flex;align-items:center;justify-content:center;color:var(--accent-dark);margin-bottom:12px;">
               <i class="ti ti-eye" style="font-size:1.2rem;"></i>
             </div>
             <h5 style="font-size:1rem;font-weight:700;margin-bottom:8px;">Our Vision</h5>
@@ -434,7 +434,7 @@
         </div>
         <div class="col-lg-6x col-md-6 reveal reveal-delay-2">
           <div class="vision-mission-card">
-            <div style="width:40px;height:40px;border-radius:10px;background:rgba(201,168,76,0.12);display:flex;align-items:center;justify-content:center;color:var(--accent-dark);margin-bottom:12px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(214,92,29,0.12);display:flex;align-items:center;justify-content:center;color:var(--accent-dark);margin-bottom:12px;">
               <i class="ti ti-target" style="font-size:1.2rem;"></i>
             </div>
             <h5 style="font-size:1rem;font-weight:700;margin-bottom:8px;">Our Mission</h5>
