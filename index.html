@@ -242,7 +242,7 @@
       .container { padding-left: 20px; padding-right: 20px; }
       .section-padding { padding: 50px 0; }
       .section-subtitle { font-size: 0.95rem; margin-bottom: 32px; }
-      .navbar-brand img { height: 36px !important; }
+      .navbar-brand img { height: 44px !important; }
       .hero .btn-lg { padding: 12px 24px; font-size: 0.9rem; width: 100%; }
       .hero .d-flex { flex-direction: column; }
       .service-card .card-body { padding: 24px 20px; }
@@ -298,7 +298,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top" style="box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
     <div class="container">
-      <a class="navbar-brand" href="#hero"><img src="assets/images/logo.jpg" alt="Shanexus Global" style="height:48px;width:auto;"></a>
+      <a class="navbar-brand" href="#hero"><img src="assets/images/logo.jpg" alt="Shanexus Global" style="height:60px;width:auto;"></a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -339,7 +339,7 @@
         </div>
         <div class="col-lg-5">
           <div class="hero-image-wrapper">
-            <img src="assets/images/dubai/dubai-1.jpg" alt="Shanexus Global" class="img-fluid">
+            <img src="assets/images/dubai/dubai-4.jpg" alt="Shanexus Global" class="img-fluid">
             <div class="hero-float-card top d-none d-lg-flex">
               <div style="width:44px;height:44px;border-radius:12px;background:rgba(214,92,29,0.12);display:flex;align-items:center;justify-content:center;color:var(--accent-dark);">
                 <i class="ti ti-users" style="font-size:1.3rem;"></i>
@@ -639,7 +639,7 @@
       <div class="row g-5 align-items-center mb-5 reveal">
         <div class="col-md-6 order-md-2">
           <div class="dubai-gallery-card">
-            <img src="assets/images/dubai/dubai-4.jpg" alt="Dubai Business Hub" class="img-fluid dubai-gallery-img">
+            <img src="assets/images/dubai/dubai-1.jpg" alt="Dubai Business Hub" class="img-fluid dubai-gallery-img">
           </div>
         </div>
         <div class="col-md-6 order-md-1">
@@ -875,7 +875,7 @@
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-4">
-          <div style="margin-bottom:16px;"><img src="assets/images/logo.jpg" alt="Shanexus Global" style="height:50px;width:auto;"></div>
+          <div style="margin-bottom:16px;"><img src="assets/images/logo.jpg" alt="Shanexus Global" style="height:60px;width:auto;"></div>
           <p>Shanexus Global FZE LLC is a UAE-based business support and consultancy company providing reliable solutions to help businesses grow with professionalism, trust, and long-term value.</p>
           <div class="d-flex gap-2 mt-4">
             <a href="https://www.instagram.com/shanexusglobal/" target="_blank" class="social-link" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
@@ -937,6 +937,19 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const sections = document.querySelectorAll('section[id]');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const link = document.querySelector(`.navbar-nav .nav-link[href="#${e.target.id}"]`);
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(s => navObserver.observe(s));
   </script>
 
 </body>
